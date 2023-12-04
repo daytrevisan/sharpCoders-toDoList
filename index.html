@@ -3,50 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO List</title>
-    <link rel="stylesheet" href="main.css">
+    <title>TO DO List - Login</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;500;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="container">
 
-    <header>
-        <nav class="nav-topo">
-            <div class="topo-saudacao"></div>
-            <div class="topo-sair">Sair</div>
-        </nav>
-    </header>
-
-    <main class="container">
-
-        <div class="container-todo-form">
-            <p id="todo-title">Gerenciador de Tarefas</p>
-            <input type="text" id="todo-input-tarefa" class="todo-form-list-input" placeholder="Tarefa">
-            <input type="date" id="todo-input-data-inicio" class="todo-form-list-input todo-form-list-data todo-form-list-data-hora" placeholder="Data início">
-            <input type="time" id="todo-input-hora-inicio" class="todo-form-list-input todo-form-list-data-hora" placeholder="Hora início">
-            <input type="date" id="todo-input-data-fim" class="todo-form-list-input todo-form-list-data todo-form-list-data-hora" placeholder="Data término">
-            <input type="time" id="todo-input-hora-fim" class="todo-form-list-input todo-form-list-data-hora" placeholder="Hora término">
-            <textarea id="todo-input-descricao" class="todo-form-list-input todo-form-descricao" cols="30" rows="3" style="resize: none" placeholder="Descrição"></textarea>
-            <button class="todo-form-btn">Criar tarefa</button>
+        <div class="container-img">
+            <img src="./img/img-dog-removed.png" id="container-img-img">
         </div>
 
-        <div class="container-todo-table">
-            <table class="todo-table">
-                <thead>
-                    <th>Tarefa</th>
-                    <th>Início</th>
-                    <th>Término</th>
-                    <th>Status</th>
-                    <th>Alterar</th>
-                </thead>
-            </table>
-        </div>
-        
-    </main>
+        <div class="container-login">
+            <div class="container-login-login">
+                <form id="form-login-login">
+                    <label for="acesso-login" class="form-acesso form-login-label">Acesse sua conta:</label>
+                    <div class="msg-login error-msg"></div>
+                    <input type="email" required id="login-email" class="form-acesso form-acesso-input" placeholder="E-mail" autofocus>
+                    <input type="password" required id="login-senha" class="form-acesso form-acesso-input" placeholder="Senha" autofocus>
+                    <input type="submit" onclick="fazerLogin(); return false" id="form-login-login-btn" class="form-login-btn">
+                </form>
+            </div>
+            
+            <div class="container-login-signup">
+                <form id="form-login-signup">
+                    <label for="acesso-signup" class="form-acesso form-login-label">Novo por aqui? Crie sua conta:</label>
+                    <div class="msg-signup error-msg"></div>
+                    <input type="text" required id="signup-nome" class="form-acesso form-acesso-input" placeholder="Nome" oninvalid="this.setCustomValidity('Favor preencher um nome para cadastro')" autofocus>
+                    <input type="email" required id="signup-email" class="form-acesso form-acesso-input" placeholder="E-mail" oninvalid="this.setCustomValidity('Favor inserir um email no formato correto')" autofocus>
+                    <input type="password" required id="signup-senha" class="form-acesso form-acesso-input" placeholder="Senha" oninvalid="this.setCustomValidity('Favor inserir uma senha válida')" autofocus>
+                    <button type="submit" onclick="fazerSignup(); return false" id="form-login-signup-btn" class="form-login-btn">Criar conta</button>
+                </form>
+            </div>
 
-    <script src="main.js"></script>
+        </div>
+    
+    </div>
+    <script src="login.js"></script>
 </body>
 </html>
