@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO List</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;500;700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-topo">
+            <div class="topo-saudacao"></div>
+            <div class="topo-sair">Sair</div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <div class="container-todo-form">
+            <p id="todo-title">Gerenciador de Tarefas</p>
+            <input type="text" id="todo-input-tarefa" class="todo-form-list-input" placeholder="Tarefa">
+            <input type="date" id="todo-input-data-inicio" class="todo-form-list-input todo-form-list-data todo-form-list-data-hora" placeholder="Data início">
+            <input type="time" id="todo-input-hora-inicio" class="todo-form-list-input todo-form-list-data-hora" placeholder="Hora início">
+            <input type="date" id="todo-input-data-fim" class="todo-form-list-input todo-form-list-data todo-form-list-data-hora" placeholder="Data término">
+            <input type="time" id="todo-input-hora-fim" class="todo-form-list-input todo-form-list-data-hora" placeholder="Hora término">
+            <textarea id="todo-input-descricao" class="todo-form-list-input todo-form-descricao" cols="30" rows="3" style="resize: none" placeholder="Descrição"></textarea>
+            <button class="todo-form-btn">Criar tarefa</button>
+        </div>
+
+        <div class="container-todo-table">
+            <table class="todo-table">
+                <thead>
+                    <th>Tarefa</th>
+                    <th>Início</th>
+                    <th>Término</th>
+                    <th>Status</th>
+                    <th>Alterar</th>
+                </thead>
+            </table>
+        </div>
+        
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
