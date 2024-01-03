@@ -1,38 +1,34 @@
 function fazerLogin() {
     const emailLogin = document.getElementById("login-email").value;
     const senhaLogin = document.getElementById("login-senha").value;
-    const msgLogin = document.getElementById("#msg-login")
+    const msgErrorLogin = document.getElementById("msg-login");
 
-    if(emailLogin === "") {
-        msgLogin.classList.add("error-msg");
-        msgLogin.textContent = "Entre com o email cadastrado"
-    } else {      
-        if(senhaLogin === "") {
-            msgLogin.classList.add("error-msg");
-            msgLogin.textContent = "Entre com a senha cadastrado"
-            
-        } else {
-            location.href = "main.html"
-        }       
-    }
+    if( (emailLogin === "") || (senhaLogin === "") ) {
+        msgErrorLogin.textContent = "Entre com os dados cadastrados";
+        msgErrorLogin.classList = "error-msg";
+        setInterval(() => {
+            msgErrorLogin.textContent = "";
+            msgErrorLogin.classList = ""
+        }, 1500);
+    } else {
+        location.href = "main.html"
+    }       
 }
 
 function fazerSignup() {
     const nomeSignup = document.getElementById("signup-nome").value;
     const emailSignup = document.getElementById("signup-email").value;
     const senhaSignup = document.getElementById("signup-senha").value;
-
-    if(nomeSignup === "") {
-        // alert("Favor preencher um nome para cadastro")
+    const msgErrorSignup = document.getElementById("msg-signup");
+    
+    if( (nomeSignup === "") || (emailSignup === "") || (senhaSignup === "") ){
+        msgErrorSignup.textContent = "Entre com dados válidos para se cadastrar";
+        msgErrorSignup.classList = "error-msg";
+        setInterval(() => {
+            msgErrorSignup.textContent = "";
+            msgErrorSignup.classList = "";
+        }, 1500);
     } else {
-        if(emailSignup === "") {
-            // alert("Favor preencher um email")
-        } else {      
-            if(senhaSignup === "") {
-                // alert("Favor preencher uma senha")            
-            } else {
-                location.href = "main.html"
-            }       
-        }
+        location.href = "main.html"
     }
 }
