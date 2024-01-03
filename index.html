@@ -15,28 +15,29 @@
     <div class="container">
 
         <div class="container-img">
-            <img src="./img/img-dog-removed.png" id="container-img-img">
+            <img src="./img/img-dog.png" id="container-img-img">
         </div>
 
         <div class="container-login">
             <div class="container-login-login">
                 <form id="form-login-login">
-                    <label for="acesso-login" class="form-acesso form-login-label">Acesse sua conta:</label>
+                    <p class="form-acesso form-login-label">Acesse sua conta:</p>
+                    <p class="msg-login error-msg"></p>
                     <div class="msg-login error-msg"></div>
-                    <input type="email" required id="login-email" class="form-acesso form-acesso-input" placeholder="E-mail" autofocus>
-                    <input type="password" required id="login-senha" class="form-acesso form-acesso-input" placeholder="Senha" autofocus>
-                    <input type="submit" onclick="fazerLogin(); return false" id="form-login-login-btn" class="form-login-btn">
+                    <input type="email" id="login-email" class="form-acesso form-acesso-input" placeholder="E-mail" autofocus>
+                    <input type="password" id="login-senha" class="form-acesso form-acesso-input" placeholder="Senha" autofocus>
+                    <button type="submit" onclick="fazerLogin(); return false" id="form-login-login-btn" class="form-login-btn">Logar</button>
                 </form>
             </div>
             
             <div class="container-login-signup">
                 <form id="form-login-signup">
-                    <label for="acesso-signup" class="form-acesso form-login-label">Novo por aqui? Crie sua conta:</label>
-                    <div class="msg-signup error-msg"></div>
-                    <input type="text" required id="signup-nome" class="form-acesso form-acesso-input" placeholder="Nome" oninvalid="this.setCustomValidity('Favor preencher um nome para cadastro')" autofocus>
+                    <p class="form-acesso form-login-label">Novo por aqui? Crie sua conta:</p>
+                    <p class="msg-signup error-msg"></p>
+                    <input type="text" required id="signup-nome" class="form-acesso form-acesso-input" placeholder="Nome" autofocus>
                     <input type="email" required id="signup-email" class="form-acesso form-acesso-input" placeholder="E-mail" oninvalid="this.setCustomValidity('Favor inserir um email no formato correto')" autofocus>
                     <input type="password" required id="signup-senha" class="form-acesso form-acesso-input" placeholder="Senha" oninvalid="this.setCustomValidity('Favor inserir uma senha válida')" autofocus>
-                    <button type="submit" onclick="fazerSignup(); return false" id="form-login-signup-btn" class="form-login-btn">Criar conta</button>
+                    <button type="submit" onclick="fazerSignup(); return false" id="form-login-signup-btn" class="form-login-btn">Registrar</button>
                 </form>
             </div>
 
