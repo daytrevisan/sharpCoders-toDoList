@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO DO List</title>
-    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;500;700&family=Roboto&display=swap" rel="stylesheet">
@@ -24,13 +24,13 @@
 
         <div class="container-todo-form">
             <p id="todo-title">Gerenciador de Tarefas</p>
-            <input type="text" id="todo-input-tarefa" class="todo-form-list-input" placeholder="Tarefa">
-            <input type="date" id="todo-input-data-inicio" class="todo-form-list-input todo-form-list-data todo-form-list-data-hora" placeholder="Data início">
-            <input type="time" id="todo-input-hora-inicio" class="todo-form-list-input todo-form-list-data-hora" placeholder="Hora início">
-            <input type="date" id="todo-input-data-fim" class="todo-form-list-input todo-form-list-data todo-form-list-data-hora" placeholder="Data término">
-            <input type="time" id="todo-input-hora-fim" class="todo-form-list-input todo-form-list-data-hora" placeholder="Hora término">
+            <input type="text" id="todo-input-tarefa" class="todo-form-list-input" placeholder="Tarefa" required>
+            <input type="date" id="todo-input-data-inicio" class="todo-form-list-input todo-form-list-data todo-form-list-data-hora" placeholder="Data início" required>
+            <input type="time" id="todo-input-hora-inicio" class="todo-form-list-input todo-form-list-data-hora" placeholder="Hora início" required>
+            <input type="date" id="todo-input-data-fim" class="todo-form-list-input todo-form-list-data todo-form-list-data-hora" placeholder="Data término" required>
+            <input type="time" id="todo-input-hora-fim" class="todo-form-list-input todo-form-list-data-hora" placeholder="Hora término" required>
             <textarea id="todo-input-descricao" class="todo-form-list-input todo-form-descricao" cols="30" rows="3" style="resize: none" placeholder="Descrição"></textarea>
-            <button class="todo-form-btn">Criar tarefa</button>
+            <input submit="" class="todo-form-btn">Criar tarefa
         </div>
 
         <div class="container-todo-table">
