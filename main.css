@@ -6,6 +6,7 @@
 body {
     font-family: var(--font);
     background-color: #7f1e47;
+    height: 100%;
 }
 
 .nav-topo {
